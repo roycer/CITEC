@@ -3,12 +3,11 @@
 using namespace std;
 
 int main(){
-	int jug,rond;
+	int jug,rond,p;
 	while(cin>>jug>>rond){
 		map<int,int> m;
 		for(int i=0;i<rond;i++){
 			for(int j=0;j<jug;j++){
-				int p;
 				cin>>p;
 				m[j]+=p;
 			}
