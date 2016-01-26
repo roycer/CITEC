@@ -38,11 +38,13 @@
         historial_J(iter) =(1/(2*m))*sum_j;
         
         % Actualizacion simultanea de los parametros theta_0 y theta_1
-        theta_0 = theta_0 - alpha * ( 1.0 / m ) * sum_0;
-        theta_1 = theta_1 - alpha * ( 1.0 / m ) * sum_1;
+        theta_0 = theta_0 - alpha * ( 1.0 / m ) * sum_0
+        theta_1 = theta_1 - alpha * ( 1.0 / m ) * sum_1
         
     end
-    
+    disp('----');
+    disp(theta_0);
+    disp(theta_1);
     
     fprintf('costo minimo: %f',min(historial_J));
     

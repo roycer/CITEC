@@ -35,7 +35,7 @@ for iter = 1:num_iters
     end
     %%%%%%% END OF PLOTING %%%%%%
     
-    J_history(iter) = ( 1 / ( 2 * m ) ) * ( X * Theta - y )' * ( X * Theta - y );
+    J_history(iter) = ( 1 / ( 2 * m ) ) * ( X.2 * Theta - y )' * ( X * Theta - y );
     Theta = Theta - alpha * (1 / m ) * (( X * Theta - y )' * X)';
     disp(Theta);
 end
@@ -46,6 +46,9 @@ figure, plot ([1:num_iters], J_history);
 function X = composeX_norm( X, poly_degree)
 m = size(X, 1);
 n = size(X, 2);
+
+
+
 for i_var = 1:n
     for degree = 2:poly_degree
         TempX = X(:,i_var) .^ degree;
